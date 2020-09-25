@@ -13,7 +13,8 @@ RUN apt-get update \
 COPY ./requirements.txt /tmp/requirements.txt
 
 # install requirements from file
-RUN pip3 install -qr /tmp/requirements.txt
+RUN pip3 install --upgrade pip
+RUN pip3 install -r /tmp/requirements.txt
 
 # add main program to /src/ directory
 COPY main.py /src/
