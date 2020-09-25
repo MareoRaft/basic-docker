@@ -123,6 +123,7 @@ This run command introduces a few new concepts.  Notice in the Dockerfile there 
 `wget -qO- http://localhost:5000 --post-data ''`
 
 `wget -qO- http://localhost:5000 --post-data name=<my-name>`
+
 ```dockerfile
 # use apline base image
 FROM alpine:edge
