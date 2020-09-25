@@ -7,5 +7,5 @@ RUN apt-get update && apt-get install -y python3
 # run python command during build process
 RUN python3 -c "print('hello world')"
 
-# when container is launched, run differenth python command
+# when container is launched, run different python command
 CMD ["python3", "-c", "print('hello world again')"]
