@@ -66,8 +66,9 @@ CMD ["python3", "-c", "print('hello world again')"]
 ```
 
 Once you run this once, try building it again.  Does it still give both outputs?
+
 ### hello-code
-This examples runs some code from a Python file.  Like before it builds an image starting with Ubuntu, but it has to install a few extra dependencies to get things to work with `opencv`.
+This example runs some code from a Python file.  Like before it builds an image starting with Ubuntu, but it has to install a few extra dependencies to get things to work with `opencv`.
 
 The build command is similar to before
 
@@ -106,6 +107,7 @@ WORKDIR /src/
 CMD ["python3", "main.py"]
 
 ```
+
 ### hello-flask
 Lastly we have our first "real" example in some sense which is to deploy a little flask application in a Docker container.
 
