@@ -3,11 +3,11 @@
 These are three examples which demonstrate some of the features of Docker and containers in general!
 
 ## Why Docker?
-Its awesome.  But additionally it solves several problems in reasonable (subjective I know) ways.  Docker helps manage *containers* a technology which leverages the OS kernels ability isolate system resources and processes.  This means instead of a single machine (or virtual machine, its a cloud world after all), to run each application to ensure the applications do not interfere, we can use containers to run several processes on the same host.  Its important to remember that containers however, are not VM's, they are more of a collection of isolated process than a true isolated system.  This means containers are more "lightweight" than VM's and have almost bare metal performance, but can have increased security concerns.
+Its awesome.  But additionally it solves several problems in reasonable (subjective I know) ways.  Docker helps manage *containers*, a technology which leverages the OS kernel's ability to isolate system resources and processes.  This means instead of using a single machine (or virtual machine, its a cloud world after all) to run each application to ensure the applications do not interfere, we can use containers to run several processes on the same host.  Its important to remember that containers however, are not VM's, they are more of a collection of isolated processes than a true isolated system.  This means containers are more "lightweight" than VM's and have almost bare metal performance, but can have increased security concerns.
 
-Docker does a few things with containers, but at the heart its an api for making it easy to create, distribute, and abstract containers (yes, layers of abstractions).  It differs from other containerization techniques in that it is meant to build an environment for running a single process, if you want multiple processes, use multiple Docker containers.  There are ways to get around this sort of philosophy especially when it does odd things (see [dumb-init](https://github.com/Yelp/dumb-init)), but for most part it works just fine.  Now you might ask, "How do I coordinate a bunch of different processes if they are all in different Docker containers and need to communicate and what not?"  This is why we have things like Kubernetes and more generally container-orchestration.
+Docker does a few things with containers, but at the heart it's an api for making it easy to create, distribute, and abstract containers (yes, layers of abstractions).  It differs from other containerization techniques in that it is meant to build an environment for running a single process, if you want multiple processes, use multiple Docker containers.  There are ways to get around this sort of philosophy especially when it does odd things (see [dumb-init](https://github.com/Yelp/dumb-init)), but for most part it works just fine.  Now you might ask, "How do I coordinate a bunch of different processes if they are all in different Docker containers and need to communicate and what not?"  This is why we have things like Kubernetes and more generally container-orchestration.
 
-For development purposes its a nice tool because it can be used ensure a consistent environment between local development and production.  For example lets say you have a web application deployed in a Docker container (possible with many modern cloud services), you can use the exact same Docker container for development.  This is in contrast to using a managed stack where its always a bit of a prayer that things working on your own computer will actually work when you deploy them.
+For development purposes it's a nice tool because it can be used to ensure a consistent environment between local development and production.  For example, let's say you have a web application deployed in a Docker container (possible with many modern cloud services), you can use the exact same Docker container for development.  This is in contrast to using a managed stack where it's always a bit of a prayer that things working on your own computer will actually work when you deploy them.
 
 ## How to Docker
 
@@ -48,7 +48,7 @@ The `-t` flag gives the container a tag and the `.` tells the engine to use the 
 
 `docker run -i hello-world`
 
-The `-i` flag will allow you to see the output.
+The `-i` flag will allow you to see the output.  `-i` may not be necessary.
 
 ```dockerfile
 # pull from ubuntu18 base image
